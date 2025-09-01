@@ -5,28 +5,26 @@ import (
 	"testing"
 )
 
-type header struct{
+type header struct {
 }
 
-func(h *header)Get(key string)string{
+func (h *header) Get(key string) string {
 	return "ApiKey itisamockapikey"
 }
 
-
-func TestGetAPIKey(t *testing.T){
+func TestGetAPIKey(t *testing.T) {
 
 	apiKey := "ApiKey this_is_a_temporary_api_key"
 	expect := "this_is_a_temporary_api_key"
 	header := make(http.Header)
-	header.Set("Authorization",apiKey)
+	header.Set("Authorization", apiKey)
 
-	res,err := GetAPIKey(header)
-	if err != nil{
+	res, err := GetAPIKey(header)
+	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
 
-	if res != expect{
+	if res != expect {
 		t.Errorf("expected %q, got %q", expect, res)
 	}
 }
-

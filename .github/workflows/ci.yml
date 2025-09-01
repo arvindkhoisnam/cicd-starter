@@ -21,8 +21,5 @@ jobs:
       - name: Run unit tests
         run: go test ./... -cover
 
-      - name: Run coverage
-        run: go test ./... -cover
-
       - name: Print User's name
         run: echo Hello Arvind 👋

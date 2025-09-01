@@ -5,13 +5,6 @@ import (
 	"testing"
 )
 
-type header struct {
-}
-
-func (h *header) Get(key string) string {
-	return "ApiKey itisamockapikey"
-}
-
 func TestGetAPIKey(t *testing.T) {
 
 	apiKey := "ApiKey this_is_a_temporary_api_key"

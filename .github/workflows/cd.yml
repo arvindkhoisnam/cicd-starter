@@ -24,7 +24,7 @@ jobs:
           version: ">= 363.0.0"
 
       - name: Build Go binary
-        run: ./buildprod.sh
+        run: ./scripts/buildprod.sh
 
       - name: "Build and Push Docker Image"
         run: |

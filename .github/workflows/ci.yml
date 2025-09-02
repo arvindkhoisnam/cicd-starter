@@ -28,7 +28,7 @@ jobs:
         run: gosec ./...
 
       - name: Print User's name
-        run: echo Hello Arvind 👋.
+        run: echo Hello Arvind 👋
 
   style:
     name: Style

@@ -24,9 +24,7 @@ jobs:
           version: ">= 363.0.0"
 
       - name: Build Go binary
-        run: |
-          go mod tidy
-          go build -o notely main.go
+        run: ./buildprod.sh
 
       - name: "Build and Push Docker Image"
         run: |

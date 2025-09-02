@@ -27,6 +27,9 @@ jobs:
       - name: Run gosec
         run: gosec ./...
 
+      - name: Print User's name
+        run: echo Hello Arvind 👋
+
   style:
     name: Style
     runs-on: ubuntu-latest
